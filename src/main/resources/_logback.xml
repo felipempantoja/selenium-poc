@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+   <!-- <logger name="org.springframework" level="ERROR" addictive="true">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+    <logger name="com.gargoylesoftware" level="ERROR" addictive="true">
+        <appender-ref ref="CONSOLE" />
+    </logger>-->
+
+    <!--<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%-5level: %message%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>robot.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%-5relative %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="org.springframework" level="OFF">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="com.gargoylesoftware" level="OFF">
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>-->
+</configuration>
