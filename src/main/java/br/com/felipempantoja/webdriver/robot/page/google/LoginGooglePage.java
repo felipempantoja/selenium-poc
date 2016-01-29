@@ -5,6 +5,7 @@ import br.com.felipempantoja.webdriver.robot.page.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,20 +33,19 @@ public final class LoginGooglePage extends PageObject {
         try {
             LOGGER.info("Trying to login as {}", email);
 
-            byName("Email").type(email).submit();
-            wait(forElement(byName("Passwd")));
-            byName("Passwd").type(password).submit();
-            wait(forUrl("myaccount.google.com"));
+//            byName("Email").type(email).submit();
+//            wait(forElement(byName("Passwd")));
+//            byName("Passwd").type(password).submit();
+//            wait(forUrl("myaccount.google.com"));
 
-//            emailField.sendKeys(email);
-//            emailField.submit();
-//
-//
-//            wait.until(ExpectedConditions.presenceOfElementLocated(By.name("Passwd")));
-//
-//            passwordField.sendKeys(password);
-//            passwordField.submit();
-//
+            emailField.sendKeys(email);
+            emailField.submit();
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("Passwd")));
+
+            passwordField.sendKeys(password);
+            passwordField.submit();
+
 //            wait.until(ExpectedConditions.urlContains("myaccount.google.com"));
 
             LOGGER.info("Login as {} successful", email);

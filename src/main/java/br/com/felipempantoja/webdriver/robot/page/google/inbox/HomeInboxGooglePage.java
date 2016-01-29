@@ -19,7 +19,7 @@ public class HomeInboxGooglePage extends PageObject {
 
     @Override
     protected String getPage() {
-        return "http://inbox.google.com";
+        return "http://gmail.com";
     }
 
     @Override
